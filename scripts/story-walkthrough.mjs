@@ -7,7 +7,7 @@ try{
  p.setDefaultTimeout(120000);
  const connected=(await (await fetch(base+'/api/status')).json()).live;
  const errors=[];p.on('pageerror',e=>errors.push(e.message));
- await p.goto(base,{waitUntil:'domcontentloaded'});
+ await p.goto(base+'/dashboard',{waitUntil:'domcontentloaded'});
  await p.addStyleTag({content:'* { font-family: Arial, sans-serif !important; }'});
  assert.match(await p.locator('.hero').innerText(),/farmer’s question/);
  await p.getByRole('button',{name:'Run demo',exact:true}).click();assert.match(await p.locator('.modal').innerText(),/Lin/);

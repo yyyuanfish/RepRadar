@@ -7,7 +7,7 @@ const errors=[];p.on('pageerror',e=>errors.push(e.message));
 const overview=()=>p.getByRole('button',{name:'Overview',exact:true}).click();
 const clearChart=()=>p.getByRole('button',{name:'Clear chart filter'}).click();
 try{
- await p.goto(base,{waitUntil:'domcontentloaded'});await p.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
+ await p.goto(base+'/dashboard',{waitUntil:'domcontentloaded'});await p.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
  assert.equal(await p.locator('.sidebar-top img[alt="Syngenta Group"]').count(),0);
  assert(await p.locator('.partner img[alt="Syngenta Group"]').isVisible());
  await p.getByRole('button',{name:'Detailed view',exact:true}).click();

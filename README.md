@@ -6,7 +6,7 @@ A human-centered Corporate Affairs intelligence prototype for the **UZH.ai Synge
 
 This is a hackathon concept, not an official Syngenta product. Every incident, source, score and playbook in the demo is synthetic.
 
-**Live demo:** https://repradar-phi.vercel.app · **Source:** https://github.com/yyyuanfish/RepRadar
+**Welcome:** https://repradar-phi.vercel.app · **Dashboard:** https://repradar-phi.vercel.app/dashboard · **Source:** https://github.com/yyyuanfish/RepRadar
 
 **Start with the [team handoff guide](docs/TEAM_HANDOFF.md).**
 
@@ -50,6 +50,10 @@ npm test
 npm run build
 npm start
 ```
+
+## Welcome and direct access
+
+The homepage introduces RepRadar with an interactive Listen / Interpret / Decide preview. **Let’s explore** opens `/dashboard`; the story walkthrough opens `/dashboard?tour=1` with the demo guide ready. The dashboard logo returns to the welcome page. Use `/dashboard` directly when presenting the existing dashboard-first pitch. The deck’s current homepage link still works; click **Open workspace** to continue.
 
 ## 明天怎样演示 / Two-minute demo
 

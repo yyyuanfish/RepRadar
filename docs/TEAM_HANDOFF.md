@@ -1,6 +1,8 @@
 # RepRadar — teammate handoff / 队友使用说明
 
-- **Website:** https://repradar-phi.vercel.app
+- **Welcome page:** https://repradar-phi.vercel.app
+- **Direct dashboard (for the pitch):** https://repradar-phi.vercel.app/dashboard
+- **Open guided story:** https://repradar-phi.vercel.app/dashboard?tour=1
 - **Public source:** https://github.com/yyyuanfish/RepRadar
 - **Pitch:** [PowerPoint](../outputs/pitch/RepRadar-Pitch-Public.pptx) · [PDF backup](../outputs/pitch/RepRadar-Pitch-Public.pdf)
 - **Rehearsal:** [English script + 中文逐页重点](PITCH_SCRIPT.md)

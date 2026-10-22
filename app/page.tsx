@@ -1,2 +1,2 @@
-import RepRadar from '@/components/RepRadar';
-export default function Page(){return <RepRadar/>;}
+import Welcome from '@/components/Welcome';
+export default function Page() { return <Welcome/>; }

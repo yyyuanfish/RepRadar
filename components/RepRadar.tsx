@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect, useMemo, useRef } from "react";
 import DashboardCharts from "./DashboardCharts";
 import DetailedInsights, {type SignalDrilldown} from "./DetailedInsights";
@@ -201,6 +202,7 @@ export default function RepRadar() {
         setIncoming(!!s.incoming);
       }
     } catch {}
+    if (new URLSearchParams(window.location.search).get("tour") === "1") setGuide(true);
     setReady(true);
     refreshModel();
   }, []);
@@ -424,7 +426,7 @@ export default function RepRadar() {
       </a>
       <aside className={`sidebar ${mobile ? "mobile-open" : ""}`}>
         <div className="sidebar-top">
-          <div className="sidebar-brands"><Brand /></div>
+          <Link href="/" className="sidebar-brands" aria-label="Back to RepRadar welcome" style={{textDecoration:"none"}}><Brand /></Link>
           <button
             className="icon-button mobile-close"
             aria-label="Close navigation"

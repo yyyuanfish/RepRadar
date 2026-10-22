@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 const b=await chromium.launch({headless:true,channel:process.env.PLAYWRIGHT_CHANNEL||undefined});const p=await b.newPage({viewport:{width:1440,height:900}});const errors=[];p.on('pageerror',e=>errors.push(e.message));
 try{
- await p.goto(base,{waitUntil:'domcontentloaded'});await p.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
+ await p.goto(base+'/dashboard',{waitUntil:'domcontentloaded'});await p.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
  await p.locator('.visual-grid').waitFor();
  const boxes=await p.evaluate(()=>Object.fromEntries(['.metrics-grid','.visual-grid','.priority-panel','.hero','.sidebar .brand'].map(s=>{const r=document.querySelector(s).getBoundingClientRect();return[s,{top:r.top,bottom:r.bottom,width:r.width}]})));console.log(JSON.stringify(boxes));
  assert(boxes['.metrics-grid'].top<200);assert(boxes['.visual-grid'].bottom<650);assert(boxes['.priority-panel'].bottom<900);assert(boxes['.sidebar .brand'].top<50);assert(boxes['.hero'].top>boxes['.priority-panel'].top);

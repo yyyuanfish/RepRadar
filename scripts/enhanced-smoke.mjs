@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 const browser=await chromium.launch({headless:true,channel:process.env.PLAYWRIGHT_CHANNEL||undefined});const p=await browser.newPage({viewport:{width:1440,height:1000}});p.setDefaultTimeout(15000);const errors=[];p.on('pageerror',e=>errors.push(e.message));
 try{
- await p.goto(base,{waitUntil:'domcontentloaded'});await p.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
+ await p.goto(base+'/dashboard',{waitUntil:'domcontentloaded'});await p.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
  assert.equal(await p.getByRole('button',{name:'Simple view',exact:true}).getAttribute('aria-pressed'),'true');
  await p.getByRole('button',{name:'Detailed view',exact:true}).click();await p.locator('.compact-chart').first().waitFor({state:'visible'});
  await p.getByLabel('Chart time range').selectOption('3');assert.equal(await p.locator('.day-buttons button').count(),3);await p.locator('.day-buttons button').last().click();assert.match(await p.locator('.visual-trend .chart-takeaway').innerText(),/22 Oct.*31.*15/);

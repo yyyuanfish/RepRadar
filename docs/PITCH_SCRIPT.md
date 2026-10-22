@@ -1,6 +1,8 @@
 # RepRadar — final rehearsal script / 最终演讲稿
 
-Website: https://repradar-phi.vercel.app
+Website: https://repradar-phi.vercel.app · Direct pitch dashboard: https://repradar-phi.vercel.app/dashboard
+
+The homepage now has a welcome page. Slide 6 opens it; select **Open workspace** to continue, or keep the direct dashboard open before the pitch.
 
 Deck: `RepRadar-Pitch-Public.pptx` / PDF. Slides 1–12: ten minutes including a two-minute demo; 13–17 are Q&A only. English paragraphs are spoken text; 中文说明与 technical notes 不上台逐字读。
 

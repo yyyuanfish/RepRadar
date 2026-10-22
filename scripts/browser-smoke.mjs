@@ -7,7 +7,7 @@ const browser=await chromium.launch({headless:true,channel:process.env.PLAYWRIGH
 const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
 page.setDefaultTimeout(120000);
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
-await page.goto(base,{waitUntil:'domcontentloaded',timeout:90000});
+await page.goto(base+'/dashboard',{waitUntil:'domcontentloaded',timeout:90000});
 await page.evaluate(()=>localStorage.clear());await page.reload({waitUntil:'domcontentloaded'});
 await page.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
 await page.getByRole('button',{name:'Detailed view',exact:true}).click();
