@@ -1,0 +1,36 @@
+const base=process.env.REPRADAR_TEST_URL||'http://localhost:3001';
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright';
+const b=await chromium.launch({headless:true,channel:process.env.PLAYWRIGHT_CHANNEL||undefined});
+const p=await b.newPage({viewport:{width:1440,height:900}});p.setDefaultTimeout(20000);
+const errors=[];p.on('pageerror',e=>errors.push(e.message));
+const overview=()=>p.getByRole('button',{name:'Overview',exact:true}).click();
+const clearChart=()=>p.getByRole('button',{name:'Clear chart filter'}).click();
+try{
+ await p.goto(base,{waitUntil:'domcontentloaded'});await p.addStyleTag({content:'*{font-family:Arial,sans-serif!important}'});
+ assert.equal(await p.locator('.sidebar-top img[alt="Syngenta Group"]').count(),0);
+ assert(await p.locator('.partner img[alt="Syngenta Group"]').isVisible());
+ await p.getByRole('button',{name:'Detailed view',exact:true}).click();
+ assert(await p.locator('#detailed-insights').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=55&&r.top<160;}),'Detailed click must reveal the new section in the viewport');
+ assert.equal(await p.locator('#detailed-insights .compact-chart').count(),4);
+ await p.waitForTimeout(300);await p.screenshot({path:'outputs/screenshots/dashboard-detailed.png'});
+ const expectedConcerned=await p.locator('.sentiment-key button').filter({hasText:'Concerned'}).locator('b').innerText();
+ await p.getByRole('button',{name:/Inspect concerned signals/}).click();
+ assert.equal(await p.locator('.signal-card').count(),Number(expectedConcerned));
+ assert.match(await p.locator('.active-drilldown').innerText(),/Concerned/);
+ await clearChart();assert.equal(await p.locator('.signal-card').count(),14);
+ await overview();const channel=p.locator('.source-bars button').first();const expectedChannel=await channel.locator('b').innerText();await channel.click();assert.equal(await p.locator('.signal-card').count(),Number(expectedChannel));
+ await overview();await p.getByRole('button',{name:'0 reviewed',exact:false}).click();assert.equal(await p.locator('.signal-card').count(),0);await p.getByRole('button',{name:'Clear filters',exact:true}).click();assert.equal(await p.locator('.signal-card').count(),14);
+ await p.locator('.signal-card').first().click();await p.getByLabel('Your context or correction').fill('Demo review: keep the original concern and verify the measurement source.');await p.getByRole('button',{name:'Save context note'}).click();assert.match(await p.getByRole('status').innerText(),/saved/);await p.getByRole('button',{name:'Mark reviewed',exact:true}).click();
+ await overview();assert.equal(await p.getByLabel('Signals reviewed by a human').getAttribute('value'),'1');await p.getByRole('button',{name:'1 reviewed',exact:false}).click();assert.equal(await p.locator('.signal-card').count(),1);
+ await overview();await p.getByLabel('Compare risk topics').selectOption('residue');assert.equal(await p.locator('.driver-topic').count(),1);await p.locator('.driver-topic').click();assert.match(await p.locator('.case-heading').innerText(),/Proposed residue/);assert(await p.getByLabel('impact weight').isVisible());
+ await p.getByRole('button',{name:'Simple view',exact:true}).click();assert(!(await p.getByLabel('impact weight').isVisible()));await p.getByRole('button',{name:'Detailed view',exact:true}).click();assert(await p.getByLabel('impact weight').isVisible());
+ await p.getByRole('button',{name:'Signal inbox'}).click();assert.equal(await p.locator('.view-mode').count(),0);assert.equal(await p.locator('.signal-card').count(),14);await p.getByRole('button',{name:'Simulate new signal'}).click();assert.equal(await p.locator('.signal-card').count(),15);assert(await p.getByRole('button',{name:'Signal added'}).isDisabled());
+ await overview();await p.getByLabel('Compare risk topics').selectOption('water');assert.match(await p.locator('.driver-title').innerText(),/89\/100/);assert.equal(await p.getByLabel('Signals reviewed by a human').getAttribute('max'),'15');
+ await p.getByRole('button',{name:'Team handoff',exact:true}).click();await p.getByRole('button',{name:'Check connection',exact:true}).click();await p.waitForFunction(()=>document.querySelector('.toast')?.textContent?.includes('Connected'));assert.match(await p.getByRole('status').innerText(),/Connected to qwen3/);
+ const download=p.waitForEvent('download');await p.getByRole('button',{name:'Download brief',exact:true}).click();assert.equal((await download).suggestedFilename(),'RepRadar-email-draft.txt');
+ await p.getByRole('button',{name:'Knowledge library',exact:true}).click();await p.locator('.knowledge-card').first().click();assert(await p.getByRole('dialog').isVisible());await p.keyboard.press('Escape');
+ await overview();await p.getByRole('button',{name:'Simple view',exact:true}).click();assert.equal(await p.locator('#detailed-insights').count(),0);assert(await p.locator('.metrics-grid').evaluate(el=>el.getBoundingClientRect().top<250));
+ await p.setViewportSize({width:390,height:844});await p.getByRole('button',{name:'Detailed view',exact:true}).click();assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await p.screenshot({path:'outputs/screenshots/detailed-mobile.png',fullPage:true});
+ assert.deepEqual(errors,[]);console.log('PASS: RepRadar branding, visible detail transition, four drilldowns, filter clearing, live review progress, topic/weight controls, signal simulation, connection feedback, export, knowledge modal and mobile.');
+}finally{await b.close();}

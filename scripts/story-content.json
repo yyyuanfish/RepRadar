@@ -1,0 +1,57 @@
+{
+  "1": {
+    "title": "A farmer’s question",
+    "copy": "It is 08:12 in Basel. Maya, a Corporate Affairs colleague, sees a question from a farmer thousands of kilometres away in China. A shared headline has left him unsure about next season. This fictional story is where RepRadar begins."
+  },
+  "2": {
+    "title": "Lin’s question, Maya’s responsibility",
+    "copy": "[Presenter 3 plays Lin, calmly, for about 12 seconds.] ‘I saw a headline saying some products are already banned. I grow crops in China. Do I need to change my plans for next season? Could a local adviser help me check?’ [Presenter 1 plays Maya for about 12 seconds.] ‘Our local team needs an answer. But which source is correct? Does this European proposal apply to his situation? What can I responsibly say?’ [Narrator.] This is a fictional public-forum signal. A translation alone cannot answer it. Maya needs evidence, local expertise and a decision she can explain.",
+    "sources": "Lin and Maya are fictional personas. The policy proposal and forum post are synthetic. Lin is not a real identified farmer. Do not perform an accent or suggest that one farmer represents China."
+  },
+  "3": {
+    "title": "Why Maya cannot answer from a headline",
+    "copy": "Syngenta works in crop protection and seeds. Corporate Affairs helps the organization understand stakeholder concerns and coordinate its response. Maya has three fragments: a European proposal, an English repost calling it a ban, and Lin’s Chinese planning question. Each source answers a different question. An alert tells her that something is happening, but it does not establish what applies locally or who should act. The risk is an unsupported generic answer, or a long silence while colleagues reconstruct the same context."
+  },
+  "4": {
+    "title": "What Maya and Lin each need",
+    "copy": "Lin needs guidance relevant to his situation. Maya needs evidence she can inspect, a route to the right local colleague, and control over the reply. That is our human-centered design brief. The system makes uncertainty visible and helps her choose a next step. It must not infer Chinese product restrictions from a European headline. Local experts verify the technical advice, and Maya keeps control of the response.",
+    "sources": "Team reference: Rep_Radar_Hackathon_Pitch_Human_Aspect.pptx, slide 7. The existing story and workflow are retained; this is a design goal, not a measured outcome."
+  },
+  "5": {
+    "title": "Following the same question through RepRadar",
+    "copy": "RepRadar follows the same question through four steps. Listen: read Lin’s original wording and the translation. Interpret: compare the headline with the proposal and identify what remains unknown. Decide: retrieve role-specific guidance and compare three actions using Maya’s priorities. Review: assign a local owner, edit the action and record the reason. The dashboard gives her an overview first, with more detail when she needs it. Let us follow that journey now."
+  },
+  "6": {
+    "title": "Live demo: help Maya answer Lin",
+    "copy": "Click Open live demo to open the public website in the default browser. 0:00–0:15: show the dashboard’s KPI cards, trend, stakeholder groups and two priority topics. 0:15–0:30: Run demo, Start with the signals, inspect Lin’s Chinese question. 0:30–0:45: open Risk workspace; explain the unverified local applicability and three response options. 0:45–1:10: Ask RepRadar how to respond to Lin; inspect KB-02 and the fixed evidence boundary. Say: This public version retrieves source excerpts; local Qwen3 can generate an explanation from the same evidence. 1:10–1:40: review an option, edit the action, assign Maya and the China colleague, add the rationale and record the decision. 1:40–2:00: open Prepare team handoff; show the editable Outlook draft and ERP export. No email is sent. Switch back to PowerPoint with Command-Tab on Mac or Alt-Tab on Windows. The role-switch, feedback loop and remaining controls are available for Q&A, mapped in slides 16–17. If the server is unavailable, use slide 14.",
+    "sources": "Demo hyperlink: https://repradar-phi.vercel.app . Public version uses source excerpts, no paid model. Local Qwen3 runs separately through Ollama."
+  },
+  "7": {
+    "title": "The context behind Maya’s recommendation",
+    "copy": "Our prototype separates evidence from generation. First, it filters knowledge by role and scenario, then retrieves relevant passages using a lightweight lexical search. The public website shows those source excerpts. On the laptop, Qwen3 through Ollama can turn the same evidence into an explanation with citations. This adds context without retraining the model. Risk scoring and action ranking use transparent weights that the employee can change. The media, language and regulatory perspectives are authored examples today. A pilot would add licensed feeds, evaluated agents and document permissions. The key boundary is human review: an explanation becomes a recorded recommendation, never an automatically published response."
+  },
+  "8": {
+    "title": "The decision stays with people",
+    "copy": "Here is the human-centered test: can Maya disagree with the system, and does Lin’s actual need survive the process? She can inspect the original, change priorities and reject the suggested action. The local colleague checks language and technical context. One worried farmer must not disappear because the post has low reach. We also avoid turning a public question into an individual profile. Production requires permitted sources, personal-data minimization, identity, document permissions and an approved model environment. Maya coordinates the response; qualified colleagues own technical advice."
+  },
+  "9": {
+    "title": "What happens after Maya decides",
+    "copy": "We return to the same case after the decision. In the proposed operating workflow, the China colleague contacts Lin through an approved channel and checks whether the explanation answered his question. The reviewer records the observed outcome, including anything that did not work. A curator then decides whether a lesson is suitable for future retrieval. In the demo, these reflection and approval steps work locally, but no real contact or outcome has occurred. The reusable lesson might be to check jurisdiction and product context before offering a regional answer. Clicking approve never counts as proof of success."
+  },
+  "10": {
+    "title": "Testing the story in real work",
+    "copy": "We would test this journey with ten Corporate Affairs colleagues in two regions over six weeks. First, interview employees and establish how they handle comparable questions today. Then run in shadow mode with local reviewers. Finally, compare briefing time, citation support, missed concerns and perceived control. Proposed gates include every decision having an owner and rationale, no unauthorized publication, at least 95 percent citation support and 30 percent lower median briefing time without worse missed-concern performance. These are proposed targets. The illustrative monthly operating budget is about CHF 3.4k plus setup, with data and human review dominating this example."
+  },
+  "11": {
+    "title": "The story demonstrates the five criteria",
+    "copy": "Here is how the concrete demo meets the five categories. Fit: the dashboard and role-specific evidence help Maya coordinate a real Corporate Affairs task. Feasibility: local Qwen3, an Outlook compose link and a CSV export work today, within a bounded pilot proposal. Originality: local language context, domain knowledge, employee preferences and reviewed lessons form one decision workflow. Human-centered responsibility: simple and detailed views, quieter voices, visible unknowns and the ability to edit or reject preserve employee control. Pitch quality: Lin’s concern travels from the opening scene through the live demonstration to an accountable next step. The appendix maps the remaining demo controls to the criteria without extending the ten-minute main pitch."
+  },
+  "12": {
+    "title": "Back to Lin and Maya",
+    "copy": "Let us return to Lin. His question was simple: ‘What does this mean for my next season?’ By the end of our demo, Maya has replaced a vague alert with a recorded plan: verify the source and local applicability, assign a China response owner, and set the next update. The actual reply still needs local approval, and the outcome will be checked afterward. That is the value we want to test: a clear, accountable path to an answer. Our ask is one sponsor, ten colleagues and six weeks. RepRadar: listen closely, decide confidently."
+  },
+  "14": {
+    "title": "Story demo fallback",
+    "copy": "If the live site is unavailable, these screenshots show the same residue scenario and recorded response plan for Lin’s question. Explain the missing applicability evidence, the China owner and the rationale. No external reply has been sent. Keep the story continuous instead of switching to the unrelated water scenario."
+  }
+}
