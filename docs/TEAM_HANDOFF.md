@@ -79,3 +79,7 @@ The current deployment belongs to the `cl-thesis` Hobby workspace. The GitHub re
 [Hobby](https://vercel.com/docs/plans/hobby) is free within its limits and intended for personal/non-commercial use. This deployment is a hackathon prototype, not the proposed corporate production pilot. The deck's CHF 3.4k/month estimate is an illustrative future pilot budget, not this website's bill.
 
 The PPTX and PDF are ready to present. Slide 6 contains a browser hyperlink, not an embedded live webpage. Use Command-Tab / Alt-Tab to return. Install the included Poppins fonts or use the PDF to preserve layout. The deck-building script requires the original desktop artifact runtime; normal website development does not.
+
+## License and reuse / 复用与授权
+
+RepRadar’s original welcome page, demo code, sprout illustration, colored logo, synthetic data, documentation and original pitch content use [MIT](../LICENSE). The complete [scope](../LICENSING.md) identifies exceptions in the app, screenshots, PPTX and PDF. Syngenta marks, the Unsplash photograph, fonts and Lucide icons keep their own rights and notices. Keep the relevant notices when sharing or adapting the project; model weights and supplied original reference attachments are not part of the public release.

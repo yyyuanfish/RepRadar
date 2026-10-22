@@ -2,6 +2,8 @@
 
 **Listen closely. Decide confidently.**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) · [License scope & exceptions](LICENSING.md) · [Third-party credits](THIRD_PARTY_NOTICES.md)
+
 A human-centered Corporate Affairs intelligence prototype for the **UZH.ai Syngenta challenge**. It connects stakeholder signals, explainable triage, role-specific knowledge retrieval, recommendations and a recorded human decision.
 
 This is a hackathon concept, not an official Syngenta product. Every incident, source, score and playbook in the demo is synthetic.
@@ -9,6 +11,21 @@ This is a hackathon concept, not an official Syngenta product. Every incident, s
 **Welcome:** https://repradar-phi.vercel.app · **Dashboard:** https://repradar-phi.vercel.app/dashboard · **Source:** https://github.com/yyyuanfish/RepRadar
 
 **Start with the [team handoff guide](docs/TEAM_HANDOFF.md).**
+
+## Everything in this repository
+
+| Deliverable | Open it | What is included |
+|---|---|---|
+| Welcome page | [Live welcome](https://repradar-phi.vercel.app) | Animated radar sprout, interactive Listen / Interpret / Decide, Lin–Maya story and workspace entry |
+| Working demo | [Dashboard](https://repradar-phi.vercel.app/dashboard) | Charts, multilingual synthetic signals, risk factors, role-specific retrieval, recommendations and human review |
+| Guided scenario | [Two-minute walkthrough](https://repradar-phi.vercel.app/dashboard?tour=1) | Farmer question → evidence → local owner → response plan |
+| Optional Qwen integration | [Setup and limitations](docs/TEAM_HANDOFF.md#local-qwen--真正接入小模型) | Local Ollama setup, hosted endpoint configuration and honest source-excerpt fallback |
+| Team coordination | [Integration guide](docs/INTEGRATIONS.md) | Outlook draft link and ERP CSV export, without automatic sending or synchronization |
+| Presentation and backup | [PPTX](outputs/pitch/RepRadar-Pitch-Public.pptx) · [PDF](outputs/pitch/RepRadar-Pitch-Public.pdf) | 12 main slides + 5 appendix slides, public demo link and speaker notes in PPTX |
+| Speech and rehearsal | [Script](docs/PITCH_SCRIPT.md) | English speech, Chinese per-slide points, technical explanations, demo timings and Q&A |
+| Team handoff | [Guide](docs/TEAM_HANDOFF.md) · [Ready-to-share message](docs/TEAM_MESSAGE.md) | How to run, rehearse, reset and extend the project |
+| Source and checks | `app/`, `components/`, `lib/`, `scripts/`, `tests/` | Application source, synthetic knowledge, tests, deployment and deck build sources |
+| Rights and provenance | [Scope](LICENSING.md) · [Notices](THIRD_PARTY_NOTICES.md) · [Assets](docs/ASSETS.md) | Coverage for the welcome page, demo, artwork, data, PPT/PDF and documents; third-party exceptions |
 
 ## Pitch materials
 
@@ -203,3 +220,11 @@ RepRadar leads the sidebar; the Syngenta Group mark appears beneath “Built for
 Detailed view immediately reveals four additional panels: sentiment, languages, risk drivers, and sources with review progress. Chart selections open the matching signals or risk workspace, with a clear filter label and reset action. Simple / Detailed controls appear only where they change the page (Overview and Risk workspace). The header remains available while scrolling. Connection checks show a pending state and result.
 
 Interaction regression scripts: `scripts/dashboard-smoke.mjs`, `scripts/interaction-smoke.mjs`, `scripts/enhanced-smoke.mjs`, and `scripts/browser-smoke.mjs` (install Playwright browsers with `npx playwright install chromium`). Outlook opens a draft; ERP exports CSV. Neither sends messages nor creates external tasks.
+
+## License and attribution / 许可证与署名
+
+**MIT for RepRadar’s original contributions**, including welcome-page code and sprout illustration, the interactive demo, current colored RepRadar artwork, synthetic examples, documentation and original presentation content. Keep the copyright and permission notice when reusing covered material. See [LICENSE](LICENSE) and the exact [licensing scope](LICENSING.md).
+
+**Third-party assets keep their own terms:** Syngenta marks are not relicensed; the field photograph uses the Unsplash License; Poppins, DM Sans and Manrope use SIL OFL 1.1; Lucide icons and the older monochrome radar marks retain upstream notices. Embedded third-party content in PPTX/PDF and screenshots has the same exceptions. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [retained license texts](LICENSES/) and [dependency inventory](docs/DEPENDENCY_LICENSES.md).
+
+中文：欢迎页、Demo、原创插画与代码、模拟数据、文档和 PPT 原创部分都已写明授权范围；不能把 Syngenta 标志或第三方素材一并当作 MIT 自由授权。原始团队参考附件、密钥和模型权重不在公开仓库中。

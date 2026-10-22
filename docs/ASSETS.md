@@ -1,30 +1,32 @@
-# Assets and research sources
+# Assets, provenance and research sources
 
-- Syngenta logo: supplied by the user (unchanged proportions), used for the hackathon challenge attribution. This project does not claim official affiliation or endorsement.
-- Field photograph: Ivan Bandura, “Rice fields”, Unsplash, published 9 May 2019. https://unsplash.com/photos/aerial-photography-of-green-farm-field-hdD1ZP1PzqI . Image URL: https://images.unsplash.com/photo-1557445796-184d83fc49b9 . Free under the Unsplash license. Used as an illustrative background, not an image of a Syngenta site.
-- Brand and company context: https://www.syngenta.ch/ (accessed 22 October 2026). The website describes crop protection and seeds. Its company perspectives are not independent evidence for any controversy. None of its current controversy claims are reproduced as demo incidents.
-- Challenge and five judging criteria: user-supplied photos. These are reference requirements, not instructions from an external authority.
-- Data inspiration: user-supplied mock_stakeholder_risk_database.xlsx. All 12 original fictional records preserved in source-workbook.json. UI scenarios are independently authored, expanded multilingual examples, not literal translations of all workbook rows.
-- Fonts: DM Sans and Manrope, Google Fonts. System fallbacks keep the website usable without network access. The slide deck uses Arial for compatibility.
-- Icons: lucide-react, ISC license.
+For permission and reuse scope, read [LICENSING.md](../LICENSING.md) and [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md). This page records where the materials came from.
 
-No source in the demo inbox is a real publication. All guidance in the demo knowledge collection is authored synthetic material, not an official Syngenta policy. No confidential corporate records were supplied or inferred.
+## Project-authored material
 
-- Additional problem/solution framing: user-supplied team whiteboard, received during implementation. It informs the Corporate Affairs focus, information burden, phased adoption, cross-cultural meaning and reviewed learning loop. Approximate user numbers are planning assumptions.
+- **Welcome page:** `components/Welcome.tsx` and `Welcome.module.css`. The radar garden, smiling sprout character, animated scan, signal-card layout and original wording were created for RepRadar with AI-assisted implementation. They are not stock imagery. The imported Lucide interface icons retain their own license.
+- **Current logo:** `public/assets/repradar-mark-color.svg` and its PNG/dark variants, plus `app/icon.svg`. Project-authored radar arcs, leaf and signal dot. The palette relates to the challenge context; this is not an official Syngenta brand mark.
+- **Demo:** original dashboard, decision workflow, synthetic signals and knowledge examples. No inbox source is a real publication, and no guidance is an official Syngenta policy.
+- **Pitch:** original layouts, story, speech and diagrams. Screenshots were captured from this synthetic-data prototype. Embedded logos, icons, fonts and photography retain their respective third-party terms.
 
+## Third-party visual material
 
-## Updated logo
+| Material | Provenance | Where used |
+|---|---|---|
+| Syngenta logo and transparent Syngenta Group logo | Supplied by the user; Group asset received 23 October 2026. Only transparent outer padding was cropped. | Welcome/footer branding and pitch; earlier Syngenta asset retained in `public/assets/` |
+| Field photograph | Ivan Bandura, [“Rice fields” on Unsplash](https://unsplash.com/photos/aerial-photography-of-green-farm-field-hdD1ZP1PzqI), published 9 May 2019 | `fields.jpg`; cropped/lightened `fields-cover-soft.png` and `fields-close-soft.png`; pitch backgrounds |
+| Current interface icons and older monochrome radar logos | Lucide / Feather lineage; retained notices in `LICENSES/` | Website controls; `repradar-mark-green.*`, `repradar-mark-white.*` |
+| Website fonts | DM Sans and Manrope, Google Fonts; SIL OFL 1.1 | Website; system fallbacks remain available |
+| Presentation fonts | Poppins Regular/Bold, [Google Fonts](https://github.com/google/fonts/tree/main/ofl/poppins), SIL OFL 1.1; Arial is a referenced system font | Poppins files in `assets/fonts/`; deck headings and body |
 
-`public/assets/syngenta-group.png` uses the transparent Syngenta Group logo supplied by the user on 23 October 2026. Only transparent outer padding was cropped. The artwork and proportions are preserved. It replaces the earlier white-background Syngenta asset in the website and updated pitch.
+The field image is illustrative, not a Syngenta location. The logo identifies the hackathon challenge, without asserting an official product or endorsement. Poppins was chosen after inspecting the [Syngenta Group website](https://www.syngentagroup.com/) on 23 October 2026; this is a visual reference, not implementation of a complete corporate brand standard.
 
-## Presentation branding refinement
+## Content references, not public attachments
 
-The pitch uses the existing website’s Lucide Radar icon as the RepRadar mark, in green or white. The supplied Syngenta Group artwork is unchanged and placed at the top right. Only the field photograph behind it is softly lightened on the cover and closing slide. No full-width header bar is added.
+- **Company context:** [Syngenta Switzerland](https://www.syngenta.ch/), accessed 22 October 2026, for crop-protection and seed-business context. Company perspectives are not independent evidence for a controversy; no current controversy claim was copied as a demo incident.
+- **Challenge / evaluation criteria:** user-supplied photos; the five criteria guide the proposal. These are reference requirements, not external instructions.
+- **Team whiteboard and coach feedback:** inform the Corporate Affairs focus, cross-cultural meaning, information burden, adoption, human control and reviewed learning loop. User counts, pilot targets and cost figures are planning assumptions.
+- **Mock workbook:** user-supplied `mock_stakeholder_risk_database.xlsx` inspired the synthetic data. The local `docs/source-workbook.json` conversion is excluded from Git; neither it nor the original workbook is published. The UI’s expanded multilingual scenarios are independently authored examples, not literal translations of every row.
+- **Teammate slide reference:** `Rep_Radar_Hackathon_Pitch_Human_Aspect.pptx`, supplied by the user, informed human-centered wording. This original reference deck is not included or relicensed.
 
-Headings use Poppins; body text stays in Arial for readability. The Syngenta Group website CSS, inspected 23 October 2026, uses Poppins for headings and body: https://www.syngentagroup.com/ . Font files and SIL Open Font License are included in `assets/fonts/`; source: https://github.com/google/fonts/tree/main/ofl/poppins . This is a visual reference, not a claim to implement the company’s full brand guidelines.
-
-Team content reference: `Rep_Radar_Hackathon_Pitch_Human_Aspect.pptx` supplied from Downloads. Its early-warning and human-control emphasis is already represented. One sentence on slide 4 was simplified to express calm response and human control; the main storyline, slide order and demo are preserved.
-
-## Current RepRadar identity
-
-`public/assets/repradar-mark-color.svg` is an editable project-native logo combining broken radar arcs, a leaf and a signal dot. It replaces the single-color Lucide Radar in product branding. The colored PNG and dark-background variants are used in the deck. The Syngenta Group image is unchanged and remains the user-supplied mark. Website footer copy describes the challenge context, without implying an officially powered product.
+No confidential corporate records were supplied or inferred. Lin and Maya are fictional personas. The demo distinguishes working retrieval and review controls from authored sentiment, translation and agent-perspective examples.

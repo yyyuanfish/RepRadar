@@ -26,5 +26,11 @@
   },
   "engines": {
     "node": "22.x"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyyuanfish/RepRadar.git"
+  },
+  "homepage": "https://repradar-phi.vercel.app"
 }
