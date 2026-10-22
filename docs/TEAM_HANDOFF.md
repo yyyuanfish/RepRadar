@@ -72,7 +72,7 @@ REPRADAR_TEST_URL=https://repradar-phi.vercel.app node scripts/browser-smoke.mjs
 
 Browser scripts default to local port 3001; set `REPRADAR_TEST_URL` for another address. If using installed Chrome instead of bundled Chromium, set `PLAYWRIGHT_CHANNEL=chrome`. Model-specific scripts require local Qwen; they are not appropriate checks of the excerpt-only public deployment.
 
-The current deployment belongs to the `cl-thesis` Hobby workspace. Website updates can be deployed by its owner with `npx vercel --prod --scope cl-thesis`; GitHub is the shared source repository. Collaborators can fork and import their own copy into Vercel. Do not assume a Git push triggers deployment unless the project Git integration is connected.
+The current deployment belongs to the `cl-thesis` Hobby workspace. The GitHub repository is connected to the Vercel project. Pushes to `main` can trigger production deployments; check the Vercel deployment result before sharing a changed version. The owner can also deploy with `npx vercel --prod --scope cl-thesis`. Collaborators can fork and import their own copy into Vercel.
 
 [Hobby](https://vercel.com/docs/plans/hobby) is free within its limits and intended for personal/non-commercial use. This deployment is a hackathon prototype, not the proposed corporate production pilot. The deck's CHF 3.4k/month estimate is an illustrative future pilot budget, not this website's bill.
 
