@@ -2,19 +2,30 @@
 
 Website: https://repradar-phi.vercel.app · Direct pitch dashboard: https://repradar-phi.vercel.app/dashboard
 
-The homepage now has a welcome page. Slide 6 opens it; select **Open workspace** to continue, or keep the direct dashboard open before the pitch.
+Slide 5 opens the dashboard directly. Keep it open before the pitch; the welcome page remains available at the main website URL.
 
-Deck: `RepRadar-Pitch-Public.pptx` / PDF. Slides 1–12: ten minutes including a two-minute demo; 13–17 are Q&A only. English paragraphs are spoken text; 中文说明与 technical notes 不上台逐字读。
+Deck: `RepRadar-Pitch-Four-Part.pptx` / PDF. Slides 1–12: ten minutes including a two-minute demo; 13–18 are Q&A only. English paragraphs are spoken text; 中文说明与 technical notes 不上台逐字读。
 
 ## Seven-person ownership
 
 1 Problem / Maya · 2 UX journey · 3 Lin / scenario · 4 technology / demo operator · 5 decision support / learning · 6 human-centered design · 7 opening / feasibility / closing. One person should operate the browser throughout. Avoid unnecessary handoffs between slides.
 
+## Four-part story / 四段逻辑
+
+| Part | Slides | Main question |
+|---|---|---|
+| Problem | 2–3 | Why does Maya need help answering Lin? |
+| Solution | 4–5 | What does RepRadar do? Workflow + live demo. |
+| Architecture | 6–8 | How do retrieval, risk scoring and Qwen work, and how would we pilot them? |
+| Human aspect | 9–12 | Who reviews, decides, learns and remains accountable? |
+
+Slide 1 opens the story. Slide 12 returns to Lin and closes with the pilot ask. Slides 13–18 are backup material. Planned main-pitch time: 10 minutes including the 2-minute demo; rehearse to fit your pace.
+
 ## Main pitch and appendix
 
 ### Slide 01 — A farmer’s question
 
-**Timing:** 20 seconds · **Presenter:** 7
+**Timing:** 15 seconds · **Presenter:** 7
 
 **本页重点：** 用 08:12 Basel 和远在中国的农民提问开场。两个人物均为虚构；让观众先关心“谁需要帮助”，再介绍工具。不要朗读页面上所有字。
 
@@ -26,7 +37,7 @@ It is 08:12 in Basel. Maya, a Corporate Affairs colleague, sees a question from 
 
 ### Slide 02 — Lin’s question, Maya’s responsibility
 
-**Timing:** 45 seconds · **Presenter:** 3
+**Timing:** 40 seconds · **Presenter:** 3
 
 **本页重点：** 两位队员分别演 Lin 和 Maya，各约 12 秒；语气自然，不模仿口音。明确“欧盟提案 → 英文转述为禁令 → 中国农民困惑”，提案不等于已生效禁令，更不自动适用于中国。
 
@@ -38,7 +49,7 @@ It is 08:12 in Basel. Maya, a Corporate Affairs colleague, sees a question from 
 
 ### Slide 03 — Why Maya cannot answer from a headline
 
-**Timing:** 45 seconds · **Presenter:** 1
+**Timing:** 40 seconds · **Presenter:** 1
 
 **本页重点：** 解释 Syngenta 的农业业务和 Corporate Affairs 的沟通协调职责。问题是信息碎片化、跨语言误解、重复核实以及回复责任不清；不要声称验证过全球 CA 人数。
 
@@ -48,19 +59,7 @@ Syngenta works in crop protection and seeds. Corporate Affairs helps the organiz
 
 **Technical explanation / 技术解释：** 风险预警发现值得核查的问题，不证明因果或法律适用性。
 
-### Slide 04 — What Maya and Lin each need
-
-**Timing:** 35 seconds · **Presenter:** 6
-
-**本页重点：** 从人的需求解释功能：Lin 要当地适用的回答，Maya 要可靠证据和决策控制。突出可查看、可质疑、可修改、可拒绝；低传播量不等于低重要性。
-
-**English script:**
-
-Lin needs guidance relevant to his situation. Maya needs evidence she can inspect, a route to the right local colleague, and control over the reply. That is our human-centered design brief. The system makes uncertainty visible and helps her choose a next step. It must not infer Chinese product restrictions from a European headline. Local experts verify the technical advice, and Maya keeps control of the response.
-
-**Technical explanation / 技术解释：** Human-in-the-loop 要有真实操作控制和责任记录，而不只是页面写一句“人工审核”。
-
-### Slide 05 — Following the same question through RepRadar
+### Slide 04 — Following the same question through RepRadar
 
 **Timing:** 35 seconds · **Presenter:** 2
 
@@ -72,7 +71,7 @@ RepRadar follows the same question through four steps. Listen: read Lin’s orig
 
 **Technical explanation / 技术解释：** Progressive disclosure：先概览，再按需展开；不是隐藏重要不确定性。
 
-### Slide 06 — Live demo: help Maya answer Lin
+### Slide 05 — Live demo: help Maya answer Lin
 
 **Timing:** 120 seconds · **Presenter:** 4
 
@@ -80,25 +79,61 @@ RepRadar follows the same question through four steps. Listen: read Lin’s orig
 
 **English script:**
 
-Click Open live demo to open the public website in the default browser. 0:00–0:15: show the dashboard’s KPI cards, trend, stakeholder groups and two priority topics. 0:15–0:30: Run demo, Start with the signals, inspect Lin’s Chinese question. 0:30–0:45: open Risk workspace; explain the unverified local applicability and three response options. 0:45–1:10: Ask RepRadar how to respond to Lin; inspect KB-02 and the fixed evidence boundary. Say: This public version retrieves source excerpts; local Qwen3 can generate an explanation from the same evidence. 1:10–1:40: review an option, edit the action, assign Maya and the China colleague, add the rationale and record the decision. 1:40–2:00: open Prepare team handoff; show the editable Outlook draft and ERP export. No email is sent. Switch back to PowerPoint with Command-Tab on Mac or Alt-Tab on Windows. The role-switch, feedback loop and remaining controls are available for Q&A, mapped in slides 16–17. If the server is unavailable, use slide 14.
+Click Open live demo to open the public dashboard in the default browser. 0:00–0:15: show the dashboard’s KPI cards, trend, stakeholder groups and two priority topics. 0:15–0:30: Run demo, Start with the signals, inspect Lin’s Chinese question. 0:30–0:45: open Risk workspace; explain the unverified local applicability and three response options. 0:45–1:10: Ask RepRadar how to respond to Lin; inspect KB-02 and the fixed evidence boundary. Say: This public version retrieves source excerpts; local Qwen3 can generate an explanation from the same evidence. 1:10–1:40: review an option, edit the action, assign Maya and the China colleague, add the rationale and record the decision. 1:40–2:00: open Prepare team handoff; show the editable Outlook draft and ERP export. No email is sent. Switch back to PowerPoint with Command-Tab on Mac or Alt-Tab on Windows. The role-switch, feedback loop and remaining controls are available for Q&A, mapped in slides 16–17. If the server is unavailable, use slide 14.
 
 **Technical explanation / 技术解释：** 来源摘录 = 检索；生成式回答 = 检索结果 + LLM。网页公开版保留前者，不依赖付费 endpoint。
 
-### Slide 07 — The context behind Maya’s recommendation
+### Slide 06 — The context behind Maya’s recommendation
 
-**Timing:** 55 seconds · **Presenter:** 4
+**Timing:** 50 seconds · **Presenter:** 4
 
 **本页重点：** 解释检索与生成分离：按角色/场景过滤文档，再检索相关段落，最后可选让 Qwen组织答案。现在是词语匹配检索；不是向量检索，也没有重新训练模型。agent 观点是预写示例。
 
 **English script:**
 
-Our prototype separates evidence from generation. First, it filters knowledge by role and scenario, then retrieves relevant passages using a lightweight lexical search. The public website shows those source excerpts. On the laptop, Qwen3 through Ollama can turn the same evidence into an explanation with citations. This adds context without retraining the model. Risk scoring and action ranking use transparent weights that the employee can change. The media, language and regulatory perspectives are authored examples today. A pilot would add licensed feeds, evaluated agents and document permissions. The key boundary is human review: an explanation becomes a recorded recommendation, never an automatically published response.
+Our prototype separates evidence from generation. First, it filters knowledge by role and scenario, then retrieves relevant passages using a lightweight lexical search. The public website shows those source excerpts. On the laptop, Qwen3 through Ollama can turn the same evidence into an explanation with citations. This adds context without retraining the model. Risk scoring and action ranking use transparent weights that the employee can change. The media, language and regulatory perspectives are authored examples today. A pilot would add licensed feeds, evaluated agents and document permissions. The key boundary is human review: an explanation becomes a recorded recommendation, never an automatically published response. Next, we will unpack retrieval and ranking before showing how human control shapes the workflow.
 
 **Technical explanation / 技术解释：** Risk = Σ(rating/5 × weight)/Σweight ×100。默认权重35/25/20/20；高≥75，中≥50。它是可解释启发式分值，不是概率。推荐排序另用 evidence/trust/speed 偏好。
 
-### Slide 08 — The decision stays with people
+### Slide 07 — Retrieval, risk and generation
 
-**Timing:** 55 seconds · **Presenter:** 6
+**Timing:** 55 seconds · **Presenter:** 4
+
+**本页重点：** 用三步解释技术：先找角色和场景相关的证据，再算透明的优先级，最后可选让 Qwen 组织答案。RAG 是加上下文，不是训练模型；风险分不是争议发生概率。
+
+**English script:**
+
+Three technical choices make the workflow inspectable. First, retrieval filters knowledge by role and scenario, then ranks passages using word matching. This provides context without changing the model weights. Second, the risk score combines impact, urgency, momentum and stakeholder relevance using editable weights. It is a priority score, not a probability of controversy. Action preferences separately rank evidence quality, trust and speed. Third, the public demo returns source excerpts; optional local Qwen3 generates an explanation from those passages. Citation identifiers are checked, but an employee still needs to verify whether the source supports the claim. The pilot would add permission-aware retrieval and evaluated agents.
+
+**Technical explanation / 技术解释：** 词语匹配检索 → 相关段落作为上下文 → 可选 LLM 生成。风险分是四项 1–5 评分的加权均值再映射到 0–100；行动排序另用 evidence / trust / speed 偏好。检查引用 ID 只能确认引用存在，不能证明每个结论都被支持。
+
+### Slide 08 — Testing the story in real work
+
+**Timing:** 50 seconds · **Presenter:** 7
+
+**本页重点：** 六周、两地区、十名同事是试点提案。先建立基线，再 shadow mode，最后比较效率、漏报、来源支持与用户控制感。95% 和 30% 都是目标，不是已测结果。
+
+**English script:**
+
+We would test this journey with ten Corporate Affairs colleagues in two regions over six weeks. First, interview employees and establish how they handle comparable questions today. Then run in shadow mode with local reviewers. Finally, compare briefing time, citation support, missed concerns and perceived control. Proposed gates include every decision having an owner and rationale, no unauthorized publication, at least 95 percent citation support and 30 percent lower median briefing time without worse missed-concern performance. These are proposed targets. The illustrative monthly operating budget is about CHF 3.4k plus setup, with data and human review dominating this example.
+
+**Technical explanation / 技术解释：** Shadow mode：在正常业务旁运行，比较输出但不让系统自动驱动外部动作。人工评估 citation support 才能发现“引用存在但不支持结论”。
+
+### Slide 09 — What Maya and Lin each need
+
+**Timing:** 35 seconds · **Presenter:** 6
+
+**本页重点：** 从人的需求解释功能：Lin 要当地适用的回答，Maya 要可靠证据和决策控制。突出可查看、可质疑、可修改、可拒绝；低传播量不等于低重要性。
+
+**English script:**
+
+Lin needs guidance relevant to his situation. Maya needs evidence she can inspect, a route to the right local colleague, and control over the reply. That is our human-centered design brief. The system makes uncertainty visible and helps her choose a next step. It must not infer Chinese product restrictions from a European headline. Local experts verify the technical advice, and Maya keeps control of the response.
+
+**Technical explanation / 技术解释：** Human-in-the-loop 要有真实操作控制和责任记录，而不只是页面写一句“人工审核”。
+
+### Slide 10 — The decision stays with people
+
+**Timing:** 50 seconds · **Presenter:** 6
 
 **本页重点：** 讲真实的人类控制：保留原文、查看不确定性、调整权重、拒绝或延后、指定负责人。生产隐私方案是下一步；公开 demo 没有企业认证，不能输入真实内部资料。
 
@@ -108,7 +143,7 @@ Here is the human-centered test: can Maya disagree with the system, and does Lin
 
 **Technical explanation / 技术解释：** 角色选择控制相关性，不提供授权。生产需要 SSO、文档级权限、保留策略以及批准的模型环境。
 
-### Slide 09 — What happens after Maya decides
+### Slide 11 — What happens after Maya decides
 
 **Timing:** 45 seconds · **Presenter:** 5
 
@@ -120,33 +155,9 @@ We return to the same case after the decision. In the proposed operating workflo
 
 **Technical explanation / 技术解释：** Curator approval 是知识更新门槛；没有模型参数更新。来源 ID 校验也不代表每句话有充分证据，仍需人查看原文。
 
-### Slide 10 — Testing the story in real work
-
-**Timing:** 60 seconds · **Presenter:** 7
-
-**本页重点：** 六周、两地区、十名同事是试点提案。先建立基线，再 shadow mode，最后比较效率、漏报、来源支持与用户控制感。95% 和 30% 都是目标，不是已测结果。
-
-**English script:**
-
-We would test this journey with ten Corporate Affairs colleagues in two regions over six weeks. First, interview employees and establish how they handle comparable questions today. Then run in shadow mode with local reviewers. Finally, compare briefing time, citation support, missed concerns and perceived control. Proposed gates include every decision having an owner and rationale, no unauthorized publication, at least 95 percent citation support and 30 percent lower median briefing time without worse missed-concern performance. These are proposed targets. The illustrative monthly operating budget is about CHF 3.4k plus setup, with data and human review dominating this example.
-
-**Technical explanation / 技术解释：** Shadow mode：在正常业务旁运行，比较输出但不让系统自动驱动外部动作。人工评估 citation support 才能发现“引用存在但不支持结论”。
-
-### Slide 11 — The story demonstrates the five criteria
-
-**Timing:** 45 seconds · **Presenter:** 7
-
-**本页重点：** 严格对齐五项实际标准：问题解决匹配、可行性、原创性、以人为本与责任、Pitch/Q&A。讲功能证据，不给自己打分。
-
-**English script:**
-
-Here is how the concrete demo meets the five categories. Fit: the dashboard and role-specific evidence help Maya coordinate a real Corporate Affairs task. Feasibility: local Qwen3, an Outlook compose link and a CSV export work today, within a bounded pilot proposal. Originality: local language context, domain knowledge, employee preferences and reviewed lessons form one decision workflow. Human-centered responsibility: simple and detailed views, quieter voices, visible unknowns and the ability to edit or reject preserve employee control. Pitch quality: Lin’s concern travels from the opening scene through the live demonstration to an accountable next step. The appendix maps the remaining demo controls to the criteria without extending the ten-minute main pitch.
-
-**Technical explanation / 技术解释：** 原创性在于流程组合和员工体验，不宣称发明 NLP、RAG 或权重排序。
-
 ### Slide 12 — Back to Lin and Maya
 
-**Timing:** 40 seconds · **Presenter:** 7
+**Timing:** 65 seconds · **Presenter:** 7
 
 **本页重点：** 回到开头 Lin 的疑问。Maya 得到的是核实计划、当地负责人、下一次更新时间。用同一个故事收尾，并提出一位 sponsor、十名同事、六周试点的请求。
 
@@ -178,7 +189,7 @@ This is an illustrative operating budget, not a supplier quote. We assume ten us
 
 If the live site is unavailable, these screenshots show the same residue scenario and recorded response plan for Lin’s question. Explain the missing applicability evidence, the China owner and the rationale. No external reply has been sent. Keep the story continuous instead of switching to the unrelated water scenario.
 
-**Technical explanation / 技术解释：** PDF是静态备份；PPT和PDF第6页的链接会打开浏览器，不是嵌入网页。
+**Technical explanation / 技术解释：** PDF是静态备份；PPT和PDF第5页的链接会打开浏览器，不是嵌入网页。
 
 ### Slide 15 — Q&A
 
@@ -215,6 +226,18 @@ This page maps the analysis features to the judging criteria. The dashboard redu
 These features make responsibility visible. Employees compare options, edit or reject them, and record an owner and a reason. They can prepare an Outlook draft or export a task, but external action still requires human review. Decisions and approved lessons remain local to the browser. The learning loop reuses reviewed knowledge; it does not retrain the model. Together, these steps connect the stakeholder concern to a response plan and a later check of the outcome.
 
 **Technical explanation / 技术解释：** localStorage仅在当前浏览器和域名下保留。localhost与线上网址不会共享记录；导出用于备份，不构成企业级审计。
+
+### Slide 18 — The story demonstrates the five criteria
+
+**Timing:** Q&A only; about 30–45 seconds when asked · **Presenter:** 7
+
+**本页重点：** 严格对齐五项实际标准：问题解决匹配、可行性、原创性、以人为本与责任、Pitch/Q&A。讲功能证据，不给自己打分。
+
+**English script:**
+
+Here is how the concrete demo meets the five categories. Fit: the dashboard and role-specific evidence help Maya coordinate a real Corporate Affairs task. Feasibility: local Qwen3, an Outlook compose link and a CSV export work today, within a bounded pilot proposal. Originality: local language context, domain knowledge, employee preferences and reviewed lessons form one decision workflow. Human-centered responsibility: simple and detailed views, quieter voices, visible unknowns and the ability to edit or reject preserve employee control. Pitch quality: Lin’s concern travels from the opening scene through the live demonstration to an accountable next step. The appendix maps the remaining demo controls to the criteria without extending the ten-minute main pitch.
+
+**Technical explanation / 技术解释：** 原创性在于流程组合和员工体验，不宣称发明 NLP、RAG 或权重排序。
 
 ## Live demo: spoken lines and clicks (120 seconds)
 
@@ -264,7 +287,7 @@ Set the update time to your rehearsal day at 14:00 Zurich time; if already past,
 ## Rehearsal checklist
 
 - Open the public link in a fresh browser tab and reset old demo history.
-- Keep the PDF and slide 14 ready. Test slide 6’s hyperlink in slideshow mode on the presenting computer.
+- Keep the PDF and slide 14 ready. Test slide 5’s hyperlink in slideshow mode on the presenting computer.
 - Pick one operator. Use Command-Tab on Mac / Alt-Tab on Windows to return to slides.
 - If showing local Qwen instead, open localhost separately, check model readiness and say explicitly that this is the local generation version.
 - Keep the same fictional case from opening to close. Do not imply a real Syngenta incident or verified product restriction.

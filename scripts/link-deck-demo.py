@@ -1,6 +1,7 @@
 """Attach standard OOXML website hyperlinks to the authored demo buttons."""
 import sys,zipfile,xml.etree.ElementTree as ET
-src,dst,url=sys.argv[1:]
+src,dst,url=sys.argv[1:4]
+slide_number=int(sys.argv[4]) if len(sys.argv)>4 else 6
 if not url.startswith(('http://','https://')):raise ValueError('Demo URL must be HTTP(S).')
 P='http://schemas.openxmlformats.org/presentationml/2006/main'
 A='http://schemas.openxmlformats.org/drawingml/2006/main'
@@ -9,7 +10,7 @@ PKG='http://schemas.openxmlformats.org/package/2006/relationships'
 for prefix,ns in [('p',P),('a',A),('r',R)]:ET.register_namespace(prefix,ns)
 with zipfile.ZipFile(src) as zin:
  files={n:zin.read(n) for n in zin.namelist()}
-name='ppt/slides/slide6.xml';relsname='ppt/slides/_rels/slide6.xml.rels'
+name=f'ppt/slides/slide{slide_number}.xml';relsname=f'ppt/slides/_rels/slide{slide_number}.xml.rels'
 slide=ET.fromstring(files[name]);rels=ET.fromstring(files[relsname]);rid='rIdRepRadarDemo'
 ET.SubElement(rels,f'{{{PKG}}}Relationship',Id=rid,Type=f'{R}/hyperlink',Target=url,TargetMode='External')
 count=0

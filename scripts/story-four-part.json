@@ -1,0 +1,92 @@
+{
+  "1": {
+    "title": "A farmer’s question",
+    "copy": "It is 08:12 in Basel. Maya, a Corporate Affairs colleague, sees a question from a farmer thousands of kilometres away in China. A shared headline has left him unsure about next season. This fictional story is where RepRadar begins.",
+    "sources": "Challenge brief supplied by the team. Logo supplied by user. RepRadar mark is the project’s editable SVG radar-and-leaf symbol, created for this prototype. Green, turquoise, gold and magenta connect the website and deck. Headings use Poppins, which appears in the Syngenta Group website CSS; font licensed under SIL OFL from https://github.com/google/fonts/tree/main/ofl/poppins . Styling reference: https://www.syngentagroup.com/ accessed 23 October 2026. Field image: Ivan Bandura, Unsplash, https://unsplash.com/photos/aerial-photography-of-green-farm-field-hdD1ZP1PzqI . Illustrative background, not a Syngenta site."
+  },
+  "2": {
+    "title": "Lin’s question, Maya’s responsibility",
+    "copy": "[Presenter 3 plays Lin, calmly, for about 12 seconds.] ‘I saw a headline saying some products are already banned. I grow crops in China. Do I need to change my plans for next season? Could a local adviser help me check?’ [Presenter 1 plays Maya for about 12 seconds.] ‘Our local team needs an answer. But which source is correct? Does this European proposal apply to his situation? What can I responsibly say?’ [Narrator.] This is a fictional public-forum signal. A translation alone cannot answer it. Maya needs evidence, local expertise and a decision she can explain.",
+    "sources": "Synthetic scenario inspired by the user’s proposed farmer-to-employee storytelling.\nLin and Maya are fictional personas. The policy proposal and forum post are synthetic. Lin is not a real identified farmer. Do not perform an accent or suggest that one farmer represents China."
+  },
+  "3": {
+    "title": "Why Maya cannot answer from a headline",
+    "copy": "Syngenta works in crop protection and seeds. Corporate Affairs helps the organization understand stakeholder concerns and coordinate its response. Maya has three fragments: a European proposal, an English repost calling it a ban, and Lin’s Chinese planning question. Each source answers a different question. An alert tells her that something is happening, but it does not establish what applies locally or who should act. The risk is an unsupported generic answer, or a long silence while colleagues reconstruct the same context.",
+    "sources": "Company context: https://www.syngenta.ch/ accessed 22 October 2026. Corporate Affairs remit: supplied challenge photo. Problem statements and approximate target-user assumption: team whiteboard and coach feedback, not formal user-research findings."
+  },
+  "4": {
+    "title": "Following the same question through RepRadar",
+    "copy": "RepRadar follows the same question through four steps. Listen: read Lin’s original wording and the translation. Interpret: compare the headline with the proposal and identify what remains unknown. Decide: retrieve role-specific guidance and compare three actions using Maya’s priorities. Review: assign a local owner, edit the action and record the reason. The dashboard gives her an overview first, with more detail when she needs it. Let us follow that journey now.",
+    "sources": "Working prototype: components/RepRadar.tsx. Role-scoped knowledge: lib/data.ts and lib/engine.ts."
+  },
+  "5": {
+    "title": "Live demo: help Maya answer Lin",
+    "copy": "Click Open live demo to open the public dashboard in the default browser. 0:00–0:15: show the dashboard’s KPI cards, trend, stakeholder groups and two priority topics. 0:15–0:30: Run demo, Start with the signals, inspect Lin’s Chinese question. 0:30–0:45: open Risk workspace; explain the unverified local applicability and three response options. 0:45–1:10: Ask RepRadar how to respond to Lin; inspect KB-02 and the fixed evidence boundary. Say: This public version retrieves source excerpts; local Qwen3 can generate an explanation from the same evidence. 1:10–1:40: review an option, edit the action, assign Maya and the China colleague, add the rationale and record the decision. 1:40–2:00: open Prepare team handoff; show the editable Outlook draft and ERP export. No email is sent. Switch back to PowerPoint with Command-Tab on Mac or Alt-Tab on Windows. The role-switch, feedback loop and remaining controls are available for Q&A, mapped in slides 16–17. If the server is unavailable, use slide 14.",
+    "sources": "Demo: https://repradar-phi.vercel.app/dashboard . Online: source excerpts. Optional local generation: Qwen3 via Ollama."
+  },
+  "6": {
+    "title": "The context behind Maya’s recommendation",
+    "copy": "Our prototype separates evidence from generation. First, it filters knowledge by role and scenario, then retrieves relevant passages using a lightweight lexical search. The public website shows those source excerpts. On the laptop, Qwen3 through Ollama can turn the same evidence into an explanation with citations. This adds context without retraining the model. Risk scoring and action ranking use transparent weights that the employee can change. The media, language and regulatory perspectives are authored examples today. A pilot would add licensed feeds, evaluated agents and document permissions. The key boundary is human review: an explanation becomes a recorded recommendation, never an automatically published response. Next, we will unpack retrieval and ranking before showing how human control shapes the workflow.",
+    "sources": "Implementation: lib/engine.ts, app/api/chat/route.ts. Historical and expert documents in this demo are fictional. The laptop runs local Qwen3 through Ollama. Enterprise model hosting, vector search, agent orchestration and permissions are proposed pilot work."
+  },
+  "8": {
+    "title": "Testing the story in real work",
+    "copy": "We would test this journey with ten Corporate Affairs colleagues in two regions over six weeks. First, interview employees and establish how they handle comparable questions today. Then run in shadow mode with local reviewers. Finally, compare briefing time, citation support, missed concerns and perceived control. Proposed gates include every decision having an owner and rationale, no unauthorized publication, at least 95 percent citation support and 30 percent lower median briefing time without worse missed-concern performance. These are proposed targets. The illustrative monthly operating budget is about CHF 3.4k plus setup, with data and human review dominating this example.",
+    "sources": "Pilot scope, gates and costs are planning assumptions, not measured outcomes or supplier quotes. Detailed arithmetic is in appendix slide 13."
+  },
+  "9": {
+    "title": "What Maya and Lin each need",
+    "copy": "Lin needs guidance relevant to his situation. Maya needs evidence she can inspect, a route to the right local colleague, and control over the reply. That is our human-centered design brief. The system makes uncertainty visible and helps her choose a next step. It must not infer Chinese product restrictions from a European headline. Local experts verify the technical advice, and Maya keeps control of the response.",
+    "sources": "Principles derived from challenge criteria, coach feedback and team whiteboard. Reduced burden is a hypothesis to test, not a measured result.\nTeam reference: Rep_Radar_Hackathon_Pitch_Human_Aspect.pptx, slide 7. The existing story and workflow are retained; this is a design goal, not a measured outcome."
+  },
+  "10": {
+    "title": "The decision stays with people",
+    "copy": "Here is the human-centered test: can Maya disagree with the system, and does Lin’s actual need survive the process? She can inspect the original, change priorities and reject the suggested action. The local colleague checks language and technical context. One worried farmer must not disappear because the post has low reach. We also avoid turning a public question into an individual profile. Production requires permitted sources, personal-data minimization, identity, document permissions and an approved model environment. Maya coordinates the response; qualified colleagues own technical advice.",
+    "sources": "Concrete controls exist in the prototype. Authentication, secure audit, private hosting and independent fairness evaluation remain pilot requirements. No legal compliance certification is claimed."
+  },
+  "11": {
+    "title": "What happens after Maya decides",
+    "copy": "We return to the same case after the decision. In the proposed operating workflow, the China colleague contacts Lin through an approved channel and checks whether the explanation answered his question. The reviewer records the observed outcome, including anything that did not work. A curator then decides whether a lesson is suitable for future retrieval. In the demo, these reflection and approval steps work locally, but no real contact or outcome has occurred. The reusable lesson might be to check jurisdiction and product context before offering a regional answer. Clicking approve never counts as proof of success.",
+    "sources": "Implementation: Decision log, lessonDocs() and role/scenario filtering. Browser-local learning is excluded from connected server-side LLM context until a trusted repository exists."
+  },
+  "12": {
+    "title": "Back to Lin and Maya",
+    "copy": "Let us return to Lin. His question was simple: ‘What does this mean for my next season?’ By the end of our demo, Maya has replaced a vague alert with a recorded plan: verify the source and local applicability, assign a China response owner, and set the next update. The actual reply still needs local approval, and the outcome will be checked afterward. That is the value we want to test: a clear, accountable path to an answer. Our ask is one sponsor, ten colleagues and six weeks. RepRadar: listen closely, decide confidently.",
+    "sources": "Pilot scope is a proposal. Background photo attribution as slide 1."
+  },
+  "13": {
+    "title": "Cost assumptions",
+    "copy": "Arithmetic: 10 users × 10 requests/day × 22 working days = 2,200 requests/month. Input tokens: 2,200 × 8,000 = 17.6 million at assumed CHF 3 per million = CHF 52.80. Output tokens: 2,200 × 1,000 = 2.2 million at assumed CHF 12 per million = CHF 26.40. Total inference CHF 79.20. Add hosting 300, data 1,000 and human review 2,000 = CHF 3,379.20. This is a planning model, not current provider pricing, and excludes integration, legal review, taxes and local-model infrastructure. Actual costs depend on source licenses and workload.",
+    "sources": "All figures are explicit assumptions. No external vendor price is represented."
+  },
+  "14": {
+    "title": "Story demo fallback",
+    "copy": "If the live site is unavailable, these screenshots show the same residue scenario and recorded response plan for Lin’s question. Explain the missing applicability evidence, the China owner and the rationale. No external reply has been sent. Keep the story continuous instead of switching to the unrelated water scenario.",
+    "sources": "Screenshots captured from this delivered prototype with synthetic data."
+  },
+  "15": {
+    "title": "Q&A",
+    "copy": "Additional answers. Self-learning means approved knowledge updates, not uncontrolled reinforcement learning. Agent diversity is a proposed architecture with local review, not evidence that multiple agents automatically remove bias. We cannot promise complete public coverage. Social volume can underrepresent communities. The demo has no production authentication. Costs are scenario assumptions. The company’s exact Corporate Affairs headcount remains unverified. The distinctive contribution is the complete decision workflow, not a claim to have invented RAG or sentiment analysis.",
+    "sources": "Primary context: https://www.syngenta.ch/ . Challenge criteria and whiteboard supplied by user. Implementation limitations documented in README.md."
+  },
+  "16": {
+    "title": "Feature coverage: listen and interpret",
+    "copy": "This appendix maps every discovery and analysis capability to the judges’ criteria. The main dashboard has a simple default and an immediately visible detailed view with sentiment, language coverage, risk drivers, source counts and human-review progress. The header stays visible while scrolling. Sentiment, channel, review status, stakeholder and language charts open filtered inbox records. Risk driver charts open the corresponding risk workspace. The trend is a separate synthetic aggregate, not a claim that the 14 examples are a complete live stream. Source details preserve the original, translation and employee annotations. A simulated new signal changes the overview and water momentum. Risk scores are normalized heuristics and editable weights reveal priorities. Role and scenario filtering controls relevance; it is not production authorization. The knowledge library displays synthetic documents with owners and versions. Qwen3 generates answers locally from retrieved evidence, with source links, conversation context and an excerpt fallback. It has no live news feed. The media, regional language and regulatory perspective cards are authored examples.",
+    "sources": "Criteria use the five exact categories from the supplied evaluation photo. Fit abbreviates Problem–solution fit; Human-centered abbreviates Human-centered & responsible. Implementation: components/DashboardCharts.tsx, components/DetailedInsights.tsx, components/RepRadar.tsx, lib/engine.ts, app/api/chat/route.ts."
+  },
+  "17": {
+    "title": "Feature coverage: decide, coordinate and learn",
+    "copy": "These controls make the team’s handwritten workflow tangible: continuous monitoring, alert, human decision, response preparation and reviewed learning. Employees compare three actions by explicit preference weights. A decision requires a responsible owner and rationale. Approval records a plan, not publication. Team handoff carries uncertainty and the latest decision into an editable Microsoft 365 compose link, copyable brief or CSV export for later mapping to an ERP. No enterprise permissions are needed for the compose link; there is no mailbox reading or live ERP synchronization. A review checkbox resets when the handoff is edited. History is browser-local, with export and reset controls. A lesson is usable only after explicit curator approval, within its role and scenario; it remains local retrieval context rather than automatic LLM retraining. Model status, guided walkthrough and fallback screenshots support the pitch.",
+    "sources": "Criteria from the supplied evaluation photo; workflow from the supplied whiteboard. Implementation: components/TeamHandoff.tsx, lib/handoff.ts, lessonDocs() and local storage in components/RepRadar.tsx."
+  },
+  "18": {
+    "title": "The story demonstrates the five criteria",
+    "copy": "Here is how the concrete demo meets the five categories. Fit: the dashboard and role-specific evidence help Maya coordinate a real Corporate Affairs task. Feasibility: local Qwen3, an Outlook compose link and a CSV export work today, within a bounded pilot proposal. Originality: local language context, domain knowledge, employee preferences and reviewed lessons form one decision workflow. Human-centered responsibility: simple and detailed views, quieter voices, visible unknowns and the ability to edit or reject preserve employee control. Pitch quality: Lin’s concern travels from the opening scene through the live demonstration to an accountable next step. The appendix maps the remaining demo controls to the criteria without extending the ten-minute main pitch.",
+    "sources": "Five exact judging categories from the user-supplied evaluation photo. This is evidence mapping, not self-awarded numeric scores."
+  },
+  "7": {
+    "title": "Retrieval, risk and generation",
+    "copy": "Three technical choices make the workflow inspectable. First, retrieval filters knowledge by role and scenario, then ranks passages using word matching. This provides context without changing the model weights. Second, the risk score combines impact, urgency, momentum and stakeholder relevance using editable weights. It is a priority score, not a probability of controversy. Action preferences separately rank evidence quality, trust and speed. Third, the public demo returns source excerpts; optional local Qwen3 generates an explanation from those passages. Citation identifiers are checked, but an employee still needs to verify whether the source supports the claim. The pilot would add permission-aware retrieval and evaluated agents.",
+    "sources": "Implementation: lib/engine.ts, lib/llm.ts, app/api/chat/route.ts. All score inputs and guidance are synthetic."
+  }
+}

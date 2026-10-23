@@ -21,7 +21,7 @@ This is a hackathon concept, not an official Syngenta product. Every incident, s
 | Guided scenario | [Two-minute walkthrough](https://repradar-phi.vercel.app/dashboard?tour=1) | Farmer question → evidence → local owner → response plan |
 | Optional Qwen integration | [Setup and limitations](docs/TEAM_HANDOFF.md#local-qwen--真正接入小模型) | Local Ollama setup, hosted endpoint configuration and honest source-excerpt fallback |
 | Team coordination | [Integration guide](docs/INTEGRATIONS.md) | Outlook draft link and ERP CSV export, without automatic sending or synchronization |
-| Presentation and backup | [PPTX](outputs/pitch/RepRadar-Pitch-Public.pptx) · [PDF](outputs/pitch/RepRadar-Pitch-Public.pdf) | 12 main slides + 5 appendix slides, public demo link and speaker notes in PPTX |
+| Presentation and backup | [PPTX](outputs/pitch/RepRadar-Pitch-Four-Part.pptx) · [PDF](outputs/pitch/RepRadar-Pitch-Four-Part.pdf) | 12 main slides + 6 appendix slides, public demo link and speaker notes in PPTX |
 | Speech and rehearsal | [Script](docs/PITCH_SCRIPT.md) | English speech, Chinese per-slide points, technical explanations, demo timings and Q&A |
 | Team handoff | [Guide](docs/TEAM_HANDOFF.md) · [Ready-to-share message](docs/TEAM_MESSAGE.md) | How to run, rehearse, reset and extend the project |
 | Source and checks | `app/`, `components/`, `lib/`, `scripts/`, `tests/` | Application source, synthetic knowledge, tests, deployment and deck build sources |
@@ -29,13 +29,13 @@ This is a hackathon concept, not an official Syngenta product. Every incident, s
 
 ## Pitch materials
 
-- [Editable PowerPoint: 12 main slides + 5 appendix slides](outputs/pitch/RepRadar-Pitch-Public.pptx)
-- [PDF visual backup](outputs/pitch/RepRadar-Pitch-Public.pdf)
+- [Editable PowerPoint: 12 main slides + 6 appendix slides](outputs/pitch/RepRadar-Pitch-Four-Part.pptx)
+- [PDF visual backup](outputs/pitch/RepRadar-Pitch-Four-Part.pdf)
 - [Ten-minute English script, demo clicks and seven-person ownership](docs/PITCH_SCRIPT.md)
 - [Product, pilot and cost assumptions](docs/PRODUCT_SPEC.md)
 - [Sources and asset attribution](docs/ASSETS.md)
 
-The deck includes speaker notes. Headings use Poppins, included under `assets/fonts/` with its SIL license; install the two font files on another presenting computer or use the PDF backup to preserve appearance. Slide 6 opens the live demo in a browser using a clickable button; the link is `https://repradar-phi.vercel.app` and opens the public website. Slides 16–17 map demo features to the five judging criteria. The PDF is a fixed-layout visual backup assembled from inspected renders. Use the PPTX to edit text and native tables. The public Vercel deployment uses source-excerpt mode; local Qwen is optional.
+The deck includes speaker notes. Headings use Poppins, included under `assets/fonts/` with its SIL license; install the two font files on another presenting computer or use the PDF backup to preserve appearance. Slide 5 opens the live demo in a browser using a clickable button; the link is `https://repradar-phi.vercel.app/dashboard` and opens the dashboard directly. Slides 16–17 map demo features to the five judging criteria. The PDF is a fixed-layout visual backup assembled from inspected renders. Use the PPTX to edit text and native tables. The public Vercel deployment uses source-excerpt mode; local Qwen is optional.
 
 ## 快速开始 / Run locally
 

@@ -12,7 +12,7 @@ RepRadar’s original contributions in this repository are released under the [M
 | Synthetic scenarios and knowledge | `lib/data.ts`, `scripts/story-content.json` | Project-authored fictional incidents, example guidance, translations and narrative text; not original supplied reference materials |
 | Current RepRadar visual identity | `public/assets/repradar-mark-color*`, `app/icon.svg` | Original colored radar-and-leaf artwork; excludes the legacy Lucide-derived marks |
 | Team documentation and speech | `README.md`, `docs/` | Original documentation, English script, Chinese speaking notes, demo instructions and technical explanations |
-| Pitch deck and PDF | `outputs/pitch/RepRadar-Pitch-Public.pptx` and `.pdf` | Original slide text, layout, diagrams and original parts of embedded UI screenshots; third-party logos, imagery, icons and fonts retain their own terms |
+| Pitch deck and PDF | `outputs/pitch/RepRadar-Pitch-*.pptx` and `.pdf` (current and earlier releases) | Original slide text, layout, diagrams and original parts of embedded UI screenshots; third-party logos, imagery, icons and fonts retain their own terms |
 | Build, test and startup files | `scripts/`, `tests/`, configuration files, `Start-RepRadar.command` | Original project code; proprietary desktop tooling referenced by the slide builder is not included or licensed here |
 
 The MIT grant permits reuse, modification and distribution of covered material, including commercial reuse, subject to retaining its copyright and permission notice. It does not change a third-party asset’s terms or provide trademark rights. See the [standard MIT text](https://opensource.org/license/mit).

@@ -4,7 +4,7 @@
 - **Direct dashboard (for the pitch):** https://repradar-phi.vercel.app/dashboard
 - **Open guided story:** https://repradar-phi.vercel.app/dashboard?tour=1
 - **Public source:** https://github.com/yyyuanfish/RepRadar
-- **Pitch:** [PowerPoint](../outputs/pitch/RepRadar-Pitch-Public.pptx) · [PDF backup](../outputs/pitch/RepRadar-Pitch-Public.pdf)
+- **Pitch:** [PowerPoint](../outputs/pitch/RepRadar-Pitch-Four-Part.pptx) · [PDF backup](../outputs/pitch/RepRadar-Pitch-Four-Part.pdf)
 - **Rehearsal:** [English script + 中文逐页重点](PITCH_SCRIPT.md)
 
 ## Start here / 先看这段
@@ -78,7 +78,7 @@ The current deployment belongs to the `cl-thesis` Hobby workspace. The GitHub re
 
 [Hobby](https://vercel.com/docs/plans/hobby) is free within its limits and intended for personal/non-commercial use. This deployment is a hackathon prototype, not the proposed corporate production pilot. The deck's CHF 3.4k/month estimate is an illustrative future pilot budget, not this website's bill.
 
-The PPTX and PDF are ready to present. Slide 6 contains a browser hyperlink, not an embedded live webpage. Use Command-Tab / Alt-Tab to return. Install the included Poppins fonts or use the PDF to preserve layout. The deck-building script requires the original desktop artifact runtime; normal website development does not.
+The PPTX and PDF are ready to present. Slide 5 contains a browser hyperlink, not an embedded live webpage. Use Command-Tab / Alt-Tab to return. Install the included Poppins fonts or use the PDF to preserve layout. The deck-building script requires the original desktop artifact runtime; normal website development does not.
 
 ## License and reuse / 复用与授权
 
